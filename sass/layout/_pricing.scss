@@ -1,0 +1,79 @@
+@use "utility" as *;
+
+.pricing {
+    padding: $padding;
+}
+
+.primary-heading {
+    @include primary-heading;
+
+    .primary-question {
+       @include primary-question; 
+    }
+
+    .primary-desc {
+        @include primary-desc;
+    }
+
+    .primary-desc span {
+        @include heading-span;
+    }
+}
+
+.pricing-images {
+    padding: 8rem 7rem;
+    display: $grid;
+    justify-content: $justify;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+}
+
+.pricing-images::before {
+    content: "";
+    background-color: $primary-color;
+    position: absolute;
+    width: 80vw;
+    height: .5rem;
+    transform: translate(1vw, 10vw);
+    z-index: -1;
+}
+
+.price-image {
+    overflow: hidden;
+    display: flex;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+
+    .person {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+.price-image:hover {
+    border: .7rem $primary-color solid;
+    box-shadow: .1rem .1rem 2rem .2rem #00000028;
+    transition: all .2s ease-in-out;
+}
+
+.price-icon {
+    background-color: $primary-color;
+    transform: translate(7vw, -4vw);
+    padding: $padding;
+    width: 8rem;
+    height: 8rem;
+    @extend %placeholder-flex;
+    justify-content: $justify;
+    border-radius: $circular;
+    box-shadow: .1rem .1rem 1rem .1rem #00000045;
+}
+
+.p-image h2 {
+    font-size: 2rem;
+    font-style: $font-style;
+    font-weight: $font-600;
+    transform: translate(2rem, -2rem);
+}

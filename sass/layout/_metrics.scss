@@ -1,0 +1,73 @@
+@use "utility" as *;
+@use "offers" as *;
+
+.metrics {
+    background-image: url(../img/offer-bg.jpg);
+    background-size: cover;
+    padding-block-start: 7rem;
+    padding-block-end: 10rem;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+.inner-metric {
+    padding-block-end: 10rem;
+}
+
+.metric-question {
+    @extend .info-question;
+    margin: 0 auto 3rem auto !important;
+}
+
+.metric-desc {
+    @extend .info-desc;
+}
+
+.metric-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    padding: 10rem 2rem;
+}
+
+.metric-item {
+    background-color: #3c2f018e;
+    border-radius: 1rem;
+    transition: $primary-transition;
+    cursor: pointer;
+    // height: 20rem;
+}
+
+.metric-h3 {
+    font-size: 8rem;
+    font-style: $font-style;
+    text-align: $justify;
+    padding: 1rem;
+    color: $primary-color;
+    font-weight: 500;
+}
+
+.metric-item:hover {
+    background-color: $color-white;
+}
+
+.metric-item:hover .metric-btn {
+    background-color: $primary-color;
+}
+
+.metric-item:hover .metric-h3 {
+    color: $secondary-color;
+}
+
+.metric-btn {
+    @include primary-button;
+    background-color: $color-white;
+    @extend %placeholder-flex;
+    margin: 0 auto;
+    transform: translateY(2rem);
+}
+
+.metric-img:last-child {
+    @extend %placeholder-flex;
+    justify-content: flex-end ;
+}

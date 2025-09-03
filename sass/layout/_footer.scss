@@ -1,0 +1,72 @@
+@use "utility" as *;
+
+footer {
+    padding-block-start: 7rem;
+    background: url(../img/footer-bg.jpg);
+    background-size: cover;
+    padding-block-end: 10rem;
+    background-repeat: no-repeat;
+}
+
+.footer-car-icon {
+    display: $grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10vw;
+    margin-block-end: 6rem;
+
+    .footer-car {
+        img {
+            width: 60rem;
+        }
+    }
+
+    .footer-icons {
+        @extend %placeholder-flex;
+        column-gap: 2vw;
+        font-size: 2rem;
+
+        i {
+            background-color: $color-white;
+            color: $secondary-color;
+            padding: 2rem;
+            border-radius: $circular;
+            transition: $primary-transition;
+
+            &:hover {
+                background-color: $primary-color;
+            }
+        }
+    }
+}
+
+.footer-contact {
+    background-color: $primary-color;
+    padding: 5rem;
+
+    p {
+        font-size: 2.5rem;
+        @extend %placeholder-flex;
+        justify-content: $justify;
+
+        i {
+            font-size: 12rem;
+        }
+    }
+}
+
+.rights {
+    flex-direction: column;
+    @extend %placeholder-flex;
+    justify-content: $justify;
+    padding-block-start: 10rem;
+    row-gap: 1.5rem;
+
+    img {
+        width: 40rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+        color: #afaeae;
+    }
+}

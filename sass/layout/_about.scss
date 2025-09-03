@@ -1,0 +1,111 @@
+@use "utility" as *;
+
+.car-container {
+    @extend %placeholder-flex;
+    gap: 10rem;
+    padding: 10rem;
+    overflow-x: auto;
+    max-width: 100%;
+    // transform: translateX(10rem);
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+}
+
+// .car {
+//     animation: slide-right 4s ease-out forwards infinite;
+// }
+
+// .car:nth-child(1) {
+//   animation-delay: 0s;
+// }
+// .car:nth-child(2) {
+//   animation-delay: 0.3s;
+// }
+// .car:nth-child(3) {
+//   animation-delay: 0.6s;
+// }
+
+// @keyframes slide-right {
+//     0% {
+//         opacity: 0;
+//         transform: translateX(90rem);
+//     }
+
+//     0% {
+//         opacity: 1;
+//         // transform: translateX(0rem);
+//     }
+// }
+
+.car-img {
+    // @extend %placeholder-flex;
+    justify-content: center;
+
+    img {
+        width: 90vw;
+    }
+}
+
+.car-content {
+    text-align: $justify;
+    min-width: 10rem;
+    h2 {
+        font-size: 4.5rem;
+        font-weight: $font-600;
+        font-style: $font-style;
+        margin-block-end: 1.8rem;
+    }
+}
+
+.slider {
+    @extend %placeholder-flex;
+    justify-content: center;
+    gap: 5vw;
+
+    p {
+        font-size: 1.7rem;
+        margin-block-end: 4rem;
+    }
+
+    .car-icon {
+        font-size: 4rem;
+        transition: $primary-transition;
+        @extend %placeholder-flex;
+        justify-content: center;
+
+        &:hover {
+            background-color: $primary-color;
+            height: 7rem;
+            width: 7rem;
+            border-radius: $circular;
+            
+        }
+    }
+}
+
+.car-button {
+    @include primary-button;
+    
+    &:hover {
+        @include button-hover-effect;
+    }
+}
+
+// .car-icon {
+//     @extend %placeholder-flex;
+//     gap: 50vw;
+//     justify-content: $justify;
+//     transform: translateY(-7rem);
+
+//     .car-ico {
+//         background-color: $primary-color;
+//         width: 7rem;
+//         height: 7rem;
+//         @extend %placeholder-flex;
+//         justify-content: $justify;
+//         border-radius: $circular;
+//     }
+// }
+

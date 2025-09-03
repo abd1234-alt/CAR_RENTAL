@@ -1,0 +1,25 @@
+@use "utility" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+body::selection {
+    background-color: $primary-color;
+    color: $color-white;
+}
+
+.car-image {
+    width: 60rem !important;
+}

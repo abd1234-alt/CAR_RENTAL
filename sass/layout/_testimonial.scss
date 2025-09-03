@@ -1,0 +1,72 @@
+@use "utility" as *;
+@use "offers" as *;
+
+.review-section {
+    padding: 6rem;
+    display: $grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.review-question {
+    // transform: translateX(-40rem);
+    margin: 0 0 3rem 0 !important;
+
+}
+
+.review-desc {
+    @extend .info-heading;
+    line-height: 1.5 !important;
+}
+
+.review-text {
+    background-image: url(../img/review-bg-img.jpg);
+    padding: 6rem;
+    background-size: cover;
+    border-radius: 1rem;
+    animation: white-light 3s linear infinite forwards;
+
+    @keyframes white-light {
+        from {
+            // opacity: 0;
+            background-color: #060606;
+            transform: translateY(2rem);
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    p {
+        font-size: 1.7rem;
+        text-align: center;
+        color: $color-white;
+    }
+}
+
+.reviewer {
+    @extend %placeholder-flex;
+    column-gap: 1.5rem;
+    transform: translate(5rem, -.5rem);
+
+    .reviewer-img {
+        img {
+            border-radius: $circular;
+            width: 8rem;
+            height: 8rem;
+            box-shadow: .1rem .1rem 1rem .1rem #00000051;
+            transform: translateY(-1.5rem);
+        }
+    }
+
+    .reviewer-name {
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+}
+

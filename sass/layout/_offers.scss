@@ -1,0 +1,197 @@
+@use "utility" as *;
+
+.offers {
+    background: url(../img/offer-bg.jpg);
+    background-size: cover;
+    padding: $padding;
+    background-repeat: no-repeat;
+    // height: 220vh;
+    // padding-bottom: 10rem !important;
+}
+
+.offer-img-1 {
+    margin-block-end: 5rem;
+}
+
+.offer-info  {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1.5fr 2fr;
+    padding: $padding;
+    gap: 13rem;
+}
+
+.info-question {
+    background-color: #3c2f018e !important;
+    margin: 0 0 3rem 0 !important;
+    text-align: center;
+}
+
+.info-desc {
+    margin-block-end: 3rem;
+}
+
+.info-heading {
+    text-align: left;
+}
+
+.info-desc {
+    color: $color-white;
+}
+
+.info-question, .info-1-desc {
+    color: $color-white;
+}
+
+.info-1-desc {
+    font-size: 1.5rem;
+    
+}
+
+.info-button {
+    @include primary-button;
+    margin-block-start: 3rem;
+}
+
+.info-button:hover {
+    @include button-hover-effect;
+}
+
+.info-2 {
+    font-style: $font-style;
+    @extend %placeholder-flex;
+}
+
+.offer-box {
+    border-radius: 2rem;
+    padding: .5rem;
+    // height: 40rem;
+}
+
+.offer-box h2 {
+    font-size: 2rem;
+    text-align: $justify;
+    font-weight: $font-600;
+    margin-block-end: $padding;
+    padding: 1.4rem;
+}
+
+.offer-box-1 {
+    width: 30rem;
+    background-color: $primary-color;
+    position: $primary-position;
+    z-index: 1;
+    box-shadow: .1rem .1rem 1rem .1rem #000;
+}
+
+.box-content {
+    background-color: $secondary-color;
+    border-top-left-radius: 12rem 4rem;
+    border-top-right-radius: 12rem 4rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    padding: 4rem;
+}
+
+.box-content ul {
+    list-style: none;
+    font-size: 1.5rem;
+    color: $color-white;
+    line-height: 2.5;
+    display: $grid;
+    
+}
+
+.box-content ul li {
+    @extend %placeholder-flex;
+    gap: 1.5rem;
+}
+
+.box-content ul li i {
+    transition: $primary-transition;
+}
+
+.box-content 
+ul li:hover i {
+    transform: scale(1.4);
+}
+
+.box-content ul li i {
+    font-size: 2.5rem;
+}
+
+.box-content-1 ul li i {
+    color: $primary-color;
+}
+
+.offer-box-2 {
+    background-color: $color-white;
+    transform: translateX(28rem);
+    width: 26rem;
+}
+
+.content-2 {
+    padding: 5rem;
+}
+
+.box-2-h2 {
+    padding: 1rem !important;
+}
+
+.offer-img-2 {
+    @extend %placeholder-flex;
+    justify-content: flex-end;
+    transform: translateY(10rem);
+    padding-bottom: 20rem;
+}
+
+
+
+// $min-screen: 37.5em;
+
+
+// @mixin media{
+//     @media (width < $min-screen) {
+//         @content;
+//     }
+// }
+
+// // MAPS IN SCSS
+
+// $font-weights: (
+//     "large": 700,
+//     "medium": 500,
+//     "small": 300
+// );
+// $all-colors: (
+//     "primary-coloor": blue,
+//     "secondary-color": purple,
+//     "small": 40px
+// );
+
+// .main {
+//     background-color: yellow;
+//     color: map-get($all-colors, secondary-color);
+//     font-size: map-get($all-colors, small);
+//     font-weight: map-get($font-weights, large);
+// // mixin with media query
+//     @include media{
+//         background-color: red;
+//     }
+
+//     // nesting
+    
+//     #{&}__item {
+//         color: yellow;
+
+//         &:hover {
+//             color: red;
+//         }
+//     }
+
+// }
+// // extend
+// .not-main {
+//     @extend .main;
+// }
+
