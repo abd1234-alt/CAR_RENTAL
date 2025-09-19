@@ -1,0 +1,131 @@
+@use "utility" as *;
+
+.form {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/form-bg.jpg) center/cover no-repeat;
+    width: 100% !important;
+    // height: fit-content;
+    object-fit: cover;
+    position: relative;
+    margin-block: 7rem;
+    padding-block: 7rem;
+    overflow: hidden;
+    // height: 80rem;
+}
+
+.content {
+    backdrop-filter: blur(.3rem);
+    width: 100%;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column;
+    color: #fff;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    column-gap: 1rem;
+    row-gap: 5rem;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4rem);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 4rem;
+    border-radius: 1.2rem;
+}
+
+.content h1 {
+    padding-bottom: 5rem;
+    letter-spacing: .5rem;
+    color: $primary-color;
+    font-size: 4rem;
+    text-shadow: 4px 4px 5px rgba(255, 255, 255, 0.363) !important;
+    // padding: 1rem 2rem;
+    border-radius: 1rem;
+    // padding: 5rem;
+}
+
+ label {
+    position: absolute;
+    transition: $primary-transition;
+    opacity: 0;
+    font-size: 1.5rem;
+}
+
+input {
+    padding: 1.5rem 7rem;
+    outline: none;
+    border: none;
+    transition: $primary-transition;
+    color: $color-black;
+    // border-radius: .2rem;
+}
+
+input, select {
+    border-radius: 1.2rem;
+}
+
+.content-label input:not(:placeholder-shown) + label {
+    transform: translate(-30rem, 6rem);
+    opacity: 1;
+}
+
+select {
+    transition: $primary-transition;
+}
+
+input:focus, select:focus {
+    border-block-end: 2px $primary-color solid;
+    background-color: rgba(255, 255, 255, 0.078);
+    color: $color-white;
+    // border: 1px $color-white solid;
+}
+
+select:focus {
+    color: $color-black;
+}
+
+input[type="datetime-local"] {
+    width: 30.2rem;
+}
+
+input[type="checkbox"] {
+    accent-color: $primary-color;
+    margin-inline-end: 1rem;
+}
+
+.extra div, .terms {
+    margin-inline-end: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.terms {
+    text-align: center;
+    
+}
+
+.t-content {
+    @extend %placeholder-flex;
+}
+
+.terms a {
+    color: $primary-color;
+}
+
+#car-type {
+    padding: 1.5rem 9.3rem;
+}
+
+#transmission {
+    padding: 1.5rem 8rem;
+}
+
+.extra, .extra div, .terms {
+    @extend %placeholder-flex;
+}
+
+button[type="submit"] {
+    @include primary-button;
+    width: 31rem;
+}

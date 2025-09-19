@@ -1,0 +1,124 @@
+@use "utility" as *;
+
+.pricing {
+    padding: $padding;
+}
+
+.primary-heading {
+    @include primary-heading;
+
+    .primary-question {
+       @include primary-question; 
+    }
+
+    .primary-desc {
+        @include primary-desc;
+    }
+
+    .primary-desc span {
+        @include heading-span;
+    }
+}
+
+.pricing-images {
+    padding: 8rem 7rem;
+    display: $grid;
+    justify-content: $justify;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+}
+
+.pricing-images::before {
+    content: "";
+    background-color: $primary-color;
+    position: absolute;
+    width: 80vw;
+    height: .5rem;
+    transform: translate(1vw, 10vw);
+    z-index: -1;
+}
+
+.price-image {
+    overflow: hidden;
+    display: flex;
+    width: 20vw;
+    height: 20vw;
+    transition: $primary-transition;
+    border-radius: 1rem;
+
+    &:hover {
+        border-radius: 50%;
+        overflow: hidden;
+        animation: glow 2s linear infinite;
+        
+        // backdrop-filter: blur(10rem);
+    }
+
+    @keyframes glow {
+      0% {
+        border-color: #FFCA08;
+        box-shadow: 0 0 10px #FFCA08,
+                    0 0 20px #FFCA08,
+                    0 0 40px #FFCA08;
+      }
+      100% {
+        border-color: #7B2CBF;
+        box-shadow: 0 0 10px #cfcfcf,
+                    0 0 20px #cfcfcf,
+                    0 0 40px #cfcfcf;
+      }
+    }
+
+
+    .person {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        // display: block;
+    }
+}
+
+// .price-image:hover {
+//     border: .7rem $primary-color solid;
+//     box-shadow: .1rem .1rem 2rem .2rem #00000028;
+//     transition: all .2s ease-in-out;
+// }
+
+.price-icon {
+    background-color: $primary-color;
+    transform: translate(7vw, -4vw);
+    padding: $padding;
+    width: 8rem;
+    height: 8rem;
+    @extend %placeholder-flex;
+    justify-content: $justify;
+    border-radius: $circular;
+    box-shadow: .1rem .1rem 1rem .1rem #00000045;
+}
+
+.p-image h2 {
+    font-size: 2rem;
+    font-style: $font-style;
+    font-weight: $font-600;
+    transform: translate(2rem, -2rem);
+}
+
+
+.scale-in-center {
+   transition: all 2s linear;
+}
+
+.scale-in-center:hover {
+	animation: scale-in-center 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

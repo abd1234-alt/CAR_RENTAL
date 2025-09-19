@@ -1,0 +1,21 @@
+.menu-btn {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 3vh 4vw;
+    // background-color: red;
+    // display: none;
+     
+
+    &__burger {
+        background-color: transparent;
+        font-size: 4rem;
+        border: 0;
+        outline: 0;
+        color: #fff;
+        z-index: 2001
+    }
+}
+
+
+
